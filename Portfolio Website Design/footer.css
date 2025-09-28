@@ -1,0 +1,92 @@
+/* FOOTER */
+.footer {
+  padding: 60px;
+  background: #fff;
+  border-top: 1px solid #eee;
+  font-family: 'Inter', sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.footer-left p {
+  font-size: 28px;       /* make it large like in screenshot */
+  font-weight: 500;      /* balanced weight */
+  line-height: 1.4;      /* good spacing */
+  color: #111;           /* pure dark text */
+  margin: 0 0 20px 0;    /* spacing below */
+  max-width: 500px;      /* keeps text width neat */
+}
+
+.footer-left a {
+  color: #111;           /* same as text */
+  text-decoration: underline;  /* underline only */
+  font-weight: 600;      /* slightly stronger */
+  transition: color 0.3s ease;
+}
+
+.footer-left a:hover {
+  color: #f9a825;        /* golden highlight on hover */
+}
+
+
+.footer-link {
+  font-weight: 600;
+  text-decoration: underline;
+  color: black;
+}
+
+.footer-menu h4,
+.footer-social h4 {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* 🔥 Modern link styling */
+.footer-menu a,
+.footer-social a,
+.footer-address p {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #111;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-menu a:hover,
+.footer-social a:hover,
+.footer-address a:hover {
+  color: #f9a825; /* golden yellow like screenshot */
+  text-decoration: none; /* remove underline for cleaner look */
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .footer-left p {
+    font-size: 18px;
+  }
+
+  .footer-menu h4,
+  .footer-social h4 {
+    margin-top: 20px;
+  }
+}

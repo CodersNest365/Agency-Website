@@ -1,0 +1,296 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #fff;
+    color: #111;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+/* NAVBAR FIX */
+/* NAVBAR */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 1000;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eee;
+    /* optional subtle separator */
+}
+
+/* Center the nav content */
+.nav-container {
+    max-width: 1200px;
+    /* keeps nav centered */
+    margin: 0 auto;
+    /* center horizontally */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    box-sizing: border-box;
+}
+
+
+.logo {
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: black;
+}
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: black;
+    color: white;
+    border-radius: 4px;
+}
+
+/* HAMBURGER (hidden on desktop) */
+.hamburger {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 160px 60px 60px;
+    gap: 60px;
+}
+
+.left {
+    flex: 1;
+}
+
+.left .subtitle {
+    font-size: 22px;
+    color: #666;
+    margin-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.left .title {
+    font-size: 60px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.right {
+    flex: 1;
+}
+
+/* FORM */
+/* FORM */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+    /* keeps input boxes shorter */
+}
+
+.contact-form label {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    /* ensures label is left aligned */
+    display: block;
+    /* forces label to occupy full width above input */
+    margin-bottom: 5px;
+    /* spacing between label and input */
+}
+
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border: 1px solid black;
+}
+
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    /* already smooth border + padding */
+    height: 5em;
+    /* default height */
+    resize: vertical;
+    /* allows user manual resize too */
+    transition: height 0.4s ease;
+    /* smooth expand */
+}
+
+.contact-form textarea:focus {
+    border: 1px solid black;
+    height: calc(5em + 40px);
+    /* expand by ~50px */
+}
+
+
+.contact-form button {
+    align-self: flex-start;
+    background: black;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: white;
+    color: black;
+    border: 1px solid black;
+}
+
+/* MOBILE STYLING */
+@media (max-width: 900px) {
+    nav {
+        padding: 20px 30px;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: white;
+        width: 200px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px;
+        display: none;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        padding: 120px 30px 40px;
+        text-align: center;
+    }
+
+    .left .title {
+        font-size: 45px;
+    }
+
+    .left .subtitle {
+        font-size: 18px;
+    }
+
+    .right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (max-width: 600px) {
+
+        .left .subtitle,
+        .left .title {
+            text-align: center;
+            /* center only on small screens */
+        }
+    }
+
+    .contact-form {
+        width: 100%;
+        max-width: 90%;
+        margin: auto;
+    }
+}
+
+/* === MARQUEE SECTION === */
+.marquee {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    padding: 40px 0;
+}
+
+.marquee-content {
+    display: inline-flex;
+    gap: 50px;
+    white-space: nowrap;
+    animation: scroll-left 15s linear infinite;
+}
+
+.marquee-content span {
+    font-size: 80px;
+    font-weight: 800;
+    opacity: 0.08;
+    color: #111;
+    letter-spacing: 2px;
+}
+
+/* Animation */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .marquee-content span {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    .marquee-content span {
+        font-size: 35px;
+    }
+}

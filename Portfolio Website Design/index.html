@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AX Creative</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav>
+    <a href="index.html" class="logo">AX CREATIVE</a>
+
+    <!-- Mobile hamburger -->
+    <div class="hamburger" id="hamburger">☰</div>
+
+    <div class="nav-links" id="nav-links">
+      <a href="#services">EXPERTISE</a>
+      <a href="#about">ABOUT</a>
+      <a href="#work">WORK</a>
+      <a href="#blogs">BLOGS</a>
+      <a href="become-a-client.html" class="contact-btn mobile-btn">Become a Client</a>
+    </div>
+
+    <!-- Desktop CTA -->
+    <a href="become-a-client.html" class="contact-btn desktop-btn">Become a Client</a>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero">
+    <h1 id="line1">WHERE INNOVATION</h1>
+    <h2 id="line2">& CREATIVITY MEETS</h2>
+  </section>
+
+  <!-- ========== SERVICES / EXPERTISE SECTION ========== -->
+  <section class="services-section" id="services">
+    <h2 class="services-title">What We Can Help You With</h2>
+
+    <div class="services-grid">
+      <!-- Development -->
+      <div class="service-category">
+        <h3>Development</h3>
+        <ul>
+          <li>Full Stack Development</li>
+          <li>WordPress Development</li>
+          <li>Frontend Development</li>
+        </ul>
+        <a href="development.html" class="info-btn">More Info →</a>
+      </div>
+
+      <!-- Design -->
+      <div class="service-category">
+        <h3>Design</h3>
+        <ul>
+          <li>Graphic Designing</li>
+          <li>UI/UX Design</li>
+          <li>Branding & Logo Design</li>
+        </ul>
+        <a href="design.html" class="info-btn">More Info →</a>
+      </div>
+
+      <!-- Video Editing -->
+      <div class="service-category">
+        <h3>Video Editing</h3>
+        <ul>
+          <li>Promotional Videos</li>
+          <li>Social Media Content</li>
+          <li>Corporate Videos</li>
+        </ul>
+        <a href="video-editing.html" class="info-btn">More Info →</a>
+      </div>
+
+      <!-- 2D & 3D Arts -->
+      <div class="service-category">
+        <h3>2D & 3D Arts</h3>
+        <ul>
+          <li>Blender Work</li>
+          <li>2D Illustrations</li>
+          <li>3D Models & Animations</li>
+        </ul>
+        <a href="arts.html" class="info-btn">More Info →</a>
+      </div>
+
+      <!-- AI & Automations -->
+      <div class="service-category">
+        <h3>AI & Automations</h3>
+        <ul>
+          <li>AI Chatbots</li>
+          <li>Business Automations</li>
+          <li>Custom AI Solutions</li>
+        </ul>
+        <a href="automations.html" class="info-btn">More Info →</a>
+      </div>
+
+      <!-- Marketing -->
+      <div class="service-category">
+        <h3>Marketing</h3>
+        <ul>
+          <li>SEO (On-Page & Off-Page)</li>
+          <li>Social Media Marketing</li>
+          <li>Content Marketing</li>
+          <li>Email Campaigns</li>
+          <li>Paid Ads</li>
+        </ul>
+        <a href="marketing.html" class="info-btn">More Info →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section id="about" class="about-section">
+    <h5 class="about-subtitle">[ WHAT IS AX ]</h5>
+    <h2 class="about-text">
+      We help brands create <span>opportunities</span> and influence consumer action.
+      As your partner, we tackle challenges with tailored solutions across
+      <span>communications</span>, <span>visuals</span>, and <span>marketing services</span>
+      to drive impact and inspire connections.
+    </h2>
+    <a href="work.html" class="btn-about">More About Us</a>
+  </section>
+
+  <!-- ========== STATS SECTION ========== -->
+  <section class="stats" id="stats">
+    <div class="stat">
+      <h2 class="counter" data-target="1249">0</h2>
+      <p>PROJECTS COMPLETED</p>
+    </div>
+    <div class="stat">
+      <h2 class="counter" data-target="30">0</h2>
+      <p>A FAMILY OF</p>
+    </div>
+    <div class="stat">
+      <h2 class="counter" data-target="76">0</h2>
+      <p>CLIENTS</p>
+    </div>
+    <div class="stat">
+      <h2 class="counter" data-target="200000000">0</h2>
+      <p>PEOPLE IMPACTED</p>
+    </div>
+  </section>
+
+  <!-- ========== MARQUEE SECTION ========== -->
+  <section class="marquee">
+    <div class="marquee-content">
+      <span>AX CREATIVE</span>
+      <span>AX CREATIVE</span>
+      <span>AX CREATIVE</span>
+      <span>AX CREATIVE</span>
+      <span>AX CREATIVE</span>
+      <span>AX CREATIVE</span>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <div id="footer-placeholder"></div>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script>
+    // Hero scroll animation
+    window.addEventListener("scroll", () => {
+      let scrollY = window.scrollY;
+      document.getElementById("line1").style.transform = `translateX(${scrollY * 0.2}px)`;
+      document.getElementById("line2").style.transform = `translateX(-${scrollY * 0.2}px)`;
+
+      // Close mobile menu on scroll
+      if (navLinks.classList.contains("active")) {
+        navLinks.classList.remove("active");
+      }
+    });
+
+    // Mobile menu toggle
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+    // Close menu if clicking outside
+    document.addEventListener("click", (event) => {
+      if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+        navLinks.classList.remove("active");
+      }
+    });
+
+    // Load footer dynamically
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

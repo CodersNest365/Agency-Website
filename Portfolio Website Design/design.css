@@ -1,0 +1,135 @@
+/* ===== HERO SECTION ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 100px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-left {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.hero-right {
+  flex: 1;
+  text-align: left;
+}
+
+.logo-text {
+  font-size: 48px;
+  font-weight: 900;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.logo-text .highlight {
+  color: gray;
+}
+
+.tagline {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+/* ===== BUTTON LINKS ===== */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.btn-link {
+  display: inline-block;
+  padding: 10px 25px;
+  border: 2px solid black;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+.btn-link:hover {
+  background: black;
+  color: white;
+}
+
+/* ===== SHOWCASE ===== */
+.showcase {
+  text-align: center;
+  padding: 80px 40px;
+}
+
+.showcase h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: 800;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 40px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-right {
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .logo-text {
+    font-size: 34px;
+  }
+
+  .btn-link {
+    font-size: 13px;
+    padding: 8px 18px;
+  }
+}
